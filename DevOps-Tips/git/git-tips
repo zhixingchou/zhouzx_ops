@@ -1,0 +1,2 @@
+1、运行 git mv 就相当于运行了下面三条命令：
+$ mv README.txt README $ git rm README.txt $ git add README

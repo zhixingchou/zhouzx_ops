@@ -1,4 +1,3 @@
-
 一、nginx简介
 nginx 轻量级的HTTP服务器；
 nginx与apache相比有以下优势

@@ -9,7 +9,9 @@ Step One—Install EPEL
 EPEL stands for Extra Packages for Enterprise Linux. Because yum as a package manager does not include the latest version of nginx in its default repository, installing EPEL will make sure that nginx on CentOS stays up to date.
 
 To install EPEL, open terminal and type in:
-
+##########
+#centos6.6 的epel默认nginx版本是nginx version: nginx/1.0.15
+##########
 sudo yum install epel-release
 Step Two—Install nginx
 To install nginx, open terminal and type in:

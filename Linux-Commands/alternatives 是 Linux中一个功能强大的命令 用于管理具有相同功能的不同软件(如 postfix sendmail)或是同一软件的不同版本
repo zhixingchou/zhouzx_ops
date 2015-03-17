@@ -1,0 +1,68 @@
+Linux alternatives命令简介
+没有评论
+alternatives  是 Linux中一个功能强大的命令，用于管理具有相同功能的不同软件(如：postfix/sendmail)或是同一软件的不同版本。
+如开发中根据需要可能所使用的JDK版本会有所变化，总不能卸载后再安装吧，那得多麻烦
+alternatives就可以让多个版本同时存在系统中，根据需要自定所使用版本
+
+下面就以java为例说明如果进行版本切换
+在CentOS 6.X中已经预装JDK 1.6和JDK 1.5两个版本，默认使用JDK 1.6，现在工作需要换成JDK 1.5
+一、查看当前JDK版本
+
+Shell
+
+[root@www ~]# java -version
+java version "1.6.0_24"
+OpenJDK Runtime Environment (IcedTea6 1.11.3) (rhel-1.48.1.11.3.el6_2-x86_64)
+OpenJDK 64-Bit Server VM (build 20.0-b12, mixed mode)
+二、查看alternatives使用帮助
+
+Shell
+
+[root@www ~]# alternatives --help
+替换选择(alternatives)的版本 1.3.49.3 - 版权 (C) 1997-2000 Red Hat, Inc.
+在 GNU 公共许可的条款下，本软件可以被自由发行。
+ 
+用法：alternatives --install <link> <name> <path> <priority>
+                    [--initscript <service>]
+                    [--slave <link> <name> <path>]*
+       alternatives --remove <name> <path>
+       alternatives --auto <name>
+       alternatives --config <name>
+       alternatives --display <name>
+       alternatives --set <name> <path>
+ 
+公用选项：--verbose --test --help --usage --version
+                --altdir <directory> --admindir <directory>
+三、配置
+
+Shell
+
+[root@www ~]# alternatives --config java
+ 
+共有 2 个程序提供“java”。
+ 
+  选择    命令
+-----------------------------------------------
+*+ 1           /usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/java
+   2           /usr/lib/jvm/jre-1.5.0-gcj/bin/java
+ 
+按 Enter 来保存当前选择[+]，或键入选择号码：2
+带 * 号为系统推荐使用的版本
+带 + 号为当前使用的版本
+输入序号切换不同版本
+四、检验
+
+Shell
+
+[root@www ~]# java -version
+java version "1.5.0"
+gij (GNU libgcj) version 4.4.6 20120305 (Red Hat 4.4.6-4)
+ 
+Copyright (C) 2007 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+切换成功
+
+其他软件的切换同理，如MTA
+
+Published in Linux基础 and tagged alternatives, centos, java, jdk on 2012 年 8 月 2 日 by 影子

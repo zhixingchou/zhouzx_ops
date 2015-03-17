@@ -1,0 +1,47 @@
+SETUP JAVA
+Tomcat 8 requires JAVA 7+ in order to run. We are going to install the latest version of Oracle’s JAVA JDK 8. At the time of writing this article, the latest version of JAVA is 8u25 and can be downloaded and installed using the commands below:
+
+DOWNLOAD JAVA
+
+for 32-bit (x86) systems:
+
+## wget --no-cookies \
+--no-check-certificate \
+--header "Cookie: oraclelicense=accept-securebackup-cookie" \
+"http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25-linux-i586.rpm" \
+-O /opt/jdk-8-linux-i586.rpm
+for 64-bit (x86_64) systems:
+
+## wget --no-cookies \
+--no-check-certificate \
+--header "Cookie: oraclelicense=accept-securebackup-cookie" \
+"http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25-linux-x64.rpm" \
+-O /opt/jdk-8-linux-x64.rpm
+INSTALL JAVA
+
+for 32-bit (x86) systems:
+
+## yum install /opt/jdk-8-linux-i586.rpm
+for 64-bit (x86_64) systems:
+
+## yum install /opt/jdk-8-linux-x64.rpm
+CONFIGURE JAVA
+
+configure the JAVA package using the alternatives command:
+
+## JDK_DIRS=($(ls -d /usr/java/jdk*))
+## JDK_VER=${JDK_DIRS[@]:(-1)}
+
+## alternatives --install /usr/bin/java java /usr/java/"${JDK_VER##*/}"/jre/bin/java 20000
+## alternatives --install /usr/bin/jar jar /usr/java/"${JDK_VER##*/}"/bin/jar 20000
+## alternatives --install /usr/bin/javac javac /usr/java/"${JDK_VER##*/}"/bin/javac 20000
+## alternatives --install /usr/bin/javaws javaws /usr/java/"${JDK_VER##*/}"/jre/bin/javaws 20000
+## alternatives --set java /usr/java/"${JDK_VER##*/}"/jre/bin/java
+## alternatives --set javaws /usr/java/"${JDK_VER##*/}"/jre/bin/javaws
+## alternatives --set javac /usr/java/"${JDK_VER##*/}"/bin/javac
+## alternatives --set jar /usr/java/"${JDK_VER##*/}"/bin/jar
+VERIFY JAVA
+
+You may want to check if JAVA has been properly setup on your CentOS Linux VPS using:
+
+## java -version

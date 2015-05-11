@@ -1,0 +1,18 @@
+#! /bin/bash
+slave_n=`/usr/bin/mysql -uroot -e "show slave status\G" | grep Running | grep Yes| grep -v State | awk '{print $2}' | wc -l`
+Exec_Master_Log_Pos=`/usr/bin/mysql -uroot -e "show slave status\G" | grep Exec_Master_Log_Pos | awk '{print $2}'`
+Read_Master_Log_Pos=`/usr/bin/mysql -uroot -e "show slave status\G" | grep Read_Master_Log_Pos | awk '{print $2}'`
+#Relay_Master_Log_File=`/usr/bin/mysql -uroot -e "show slave status\G" | grep  Relay_Master_Log_File | awk '{print $2}'`
+#echo $Relay_Master_Log_File
+#Master_Log_File=`/usr/bin/mysql -uroot -e "show slave status\G" | grep  Master_Log_File | grep -v Relay| awk '{print $2}'`
+#echo $Master_Log_File
+
+if [ $slave_n -eq 2 ] && [ "$Exec_Master_Log_Pos"="$Read_Master_Log_Pos" ];then
+
+#if [ "$Relay_Master_Log_File"="$Master_Log_File");then
+      echo ok
+elif [ $slave_n -ne 2 ];then
+      echo criticle
+elif [ $slave_n -eq 2 ] && [ "$Relay_Master_Log_File"!="$Master_Log_File" ];then
+      echo warning
+fi

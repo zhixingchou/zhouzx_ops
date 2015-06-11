@@ -1,2 +1,8 @@
 1、运行 git mv 就相当于运行了下面三条命令：
 $ mv README.txt README $ git rm README.txt $ git add README
+
+2.github.com 更新，在OS端git更新命令
+#拉取远程仓库：$ git pull [remoteName] [localBranchName]
+git pull https://github.com/zhixingchou/zzx-china.git
+or 
+git pull git://github.com/zhixingchou/zzx-china.git

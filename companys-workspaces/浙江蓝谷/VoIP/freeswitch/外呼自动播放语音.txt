@@ -1,3 +1,0 @@
-1.使用FreeSWITCH做电话自动回访设置 http://www.cnblogs.com/logo-fox/p/4097056.html
-2.一个在FreeSWITCH中外呼的Lua脚 http://bbs.voip88.com/thread-45344-1-1.html
-

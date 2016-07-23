@@ -113,3 +113,46 @@ docker restart 命令会将一个运行态的容器终止，然后再重新启�
 
 可以使用 docker rm 来删除一个处于终止状态的容器。如果要删除一个运行中的容器，可以添加 -f 参数。Docker 会发送 SIGKILL 信号给容器。
 删除所有容器 docker rm $(docker ps -a -q)
+
+
+- docker --expose 参数
+
+- docker --name 参数
+- docker --volume 参数	（-v 等同于--volume）
+- docker --publish 参数
+
+> -P, --publish-all=false     Publish all exposed ports to random ports
+> 
+> -p, --publish=[]            Publish a container's port(s) to the host
+
+- docker --detach 参数
+
+> 如果在docker run 后面追加-d=true或者-d，则containter将会运行在后台模式(Detached mode)。
+
+- docker --link 参数
+- docker -storage_driver 
+- docker -storage_driver_db
+- docker -storage_driver_host
+- docker -e  
+> 作用是指定容器内的环境变量
+
+- docker stats containerId
+
+> 监控容器
+
+
+
+
+- 常用镜像
+
+Influxdb：
+
+tutum/influxdb:0.10
+
+cadvisor：
+
+google/cadvisor:latest
+
+grafana：
+
+grafana/grafana

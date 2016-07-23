@@ -18,18 +18,18 @@ To check your current kernel version, open a terminal and use uname -r to displa
 
 3. Add the yum repo.
 
-    $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
-    [dockerrepo]
-    name=Docker Repository
-    baseurl=https://yum.dockerproject.org/repo/main/centos/7/
-    enabled=1
-    gpgcheck=1
-    gpgkey=https://yum.dockerproject.org/gpg
-    EOF 
+>     $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
+>     [dockerrepo]
+>     name=Docker Repository
+>     baseurl=https://yum.dockerproject.org/repo/main/centos/7/
+>     enabled=1
+>     gpgcheck=1
+>     gpgkey=https://yum.dockerproject.org/gpg
+>     EOF 
 
 4. Install the Docker package.
 
-    $ sudo yum install docker-engine
+    $ sudo yum install docker-engine	(使用DaoCloud包安装)
 
 5. Start the Docker daemon.
 
@@ -56,9 +56,14 @@ To check your current kernel version, open a terminal and use uname -r to displa
 
     $ sudo docker images centos
 
-Docker 的安装资源文件存放在Amazon S3，国内下载速度极其缓慢。您可以通过执行下面的命令，使用 DaoCloud 镜像站点，高速安装Docker。
-
-卸载官网安装docker,使用DaoCloud安装.
+> Docker 的安装资源文件存放在Amazon S3，国内下载速度极其缓慢。您可以通过执行下面的命令，使用 DaoCloud 镜像站点，高速安装Docker。
+> 
+> 卸载官网安装docker,使用DaoCloud安装.
+> 
+> DaoCloud选择加速器2.0-选择已有主机-操作系统类型(centos)
+> 
+> 1. 安装docker
+> 2. 安装主机监控程序
 
 ----------
 

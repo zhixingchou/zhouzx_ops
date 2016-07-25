@@ -145,6 +145,10 @@ docker restart 命令会将一个运行态的容器终止，然后再重新启�
 
 > 监控容器
 
+- docker cp <containerId>:/file/path/within/container /host/path/target
+
+> 复制容器文件到宿主机
+
 
 
 

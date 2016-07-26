@@ -1,4 +1,4 @@
-**centos7 install docker**
+## centos7 install docker ##
 
 ### Prerequisites ###
 
@@ -67,7 +67,8 @@ To check your current kernel version, open a terminal and use uname -r to displa
 
 ----------
 
-**docker 常用命令**
+## docker 常用命令 ##
+
 
 - 进入docker 容器 container 
  
@@ -151,8 +152,8 @@ docker restart 命令会将一个运行态的容器终止，然后再重新启�
 
 
 
+## 常用镜像 ##
 
-- 常用镜像
 
 Influxdb：
 

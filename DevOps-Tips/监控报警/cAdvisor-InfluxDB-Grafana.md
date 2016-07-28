@@ -1,4 +1,4 @@
-# docker monitor	tool -- cAdvisor #
+# docker monitor	tool -- cAdvisor （cAdvisor-InfluxDB-Grafana）#
 
 - Cadvisor只能进行单主机的Docker容器监控
 - Cadvisor数据是存储在内存中的实时数据，无法保留历史数据
@@ -7,7 +7,7 @@
 ----------
 
 
-参考 [Docker部署(Influxdb+cadvisor+grafana)-centos7](http://www.pangxie.space/docker/456)
+参考 [Docker部署(Influxdb+cadvisor+grafana)-centos7](http://www.pangxie.space/docker/456) 
 
 参考另一个链接 [http://90docker.com/?p=176](http://90docker.com/?p=176) （**grafana添加data sources报错，关闭宿主机防火墙；之后启动容器报错？**）
 

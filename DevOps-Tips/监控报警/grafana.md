@@ -20,17 +20,14 @@
 
 
 
-    	ctrl + h 键可以调出/隐藏绿色的控制按钮
-
-
 ----------
 
-    	ctrl + h 键可以调出/隐藏绿色的控制按钮 （granafa页面）
+    ctrl + h 键可以调出/隐藏绿色的控制按钮 （granafa页面）
 
-aggregations	聚合
-mean	平均值
-integral	积分
-median	
+    aggregations	聚合
+    mean	平均值
+    integral	积分
+    median	
 
 
 ----------

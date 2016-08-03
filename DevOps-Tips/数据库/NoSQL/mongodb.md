@@ -28,3 +28,6 @@
     use  admin  
     db.shutdownServer();  
     这样也可以正常停止服务。
+
+
+- docker mongodb 安全启动

@@ -1,0 +1,1 @@
+- [s6](http://skarnet.org/software/s6/index.html) -- Docker: 使用 s6 作為多服務容器的啟動管理程序 

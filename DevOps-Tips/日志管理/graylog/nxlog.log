@@ -1,0 +1,38 @@
+########################################
+# Global directives                    #
+########################################
+##
+# 引用 http://www.emind.co/how-to/configure-nxlog-send-logs-to-graylog2/
+User nxlog
+Group nxlog
+
+LogFile /var/log/nxlog/nxlog.log
+LogLevel INFO
+
+########################################
+# Modules                              #
+########################################
+<Extension gelf>
+    Module      xm_gelf
+</Extension>
+
+<Input in>
+        Module  im_file
+		# 监控文件，nxlog有读权限
+        File    "/var/log/messages"
+</Input>
+
+# graylog-web - system/collectors - collectors - Manager configurations - NXLog 对应设置
+<Output out>
+    Module      om_udp
+    Host        graylog2-server.local
+    Port        12201
+    OutputType  GELF
+</Output>
+
+########################################
+# Routes                               #
+########################################
+<Route r>
+    Path        in => out
+</Route>

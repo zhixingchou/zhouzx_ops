@@ -38,6 +38,9 @@ To check your current kernel version, open a terminal and use uname -r to displa
 6. Verify docker is installed correctly by running a test image in a container.
 
 
+> DaoCloud客服人员回复（另一种安装方法：执行一行命令）：
+[https://www.daocloud.io/mirror#accelerator-doc](https://www.daocloud.io/mirror#accelerator-doc)
+
 
 **Create a docker group**
 

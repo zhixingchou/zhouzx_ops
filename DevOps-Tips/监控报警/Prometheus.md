@@ -1,4 +1,18 @@
-# Prometheus + Container-Exporter #
+#Prometheus+Grafana
+
+## EXPORTERS - 收集
+[https://github.com/prometheus?page=1](https://github.com/prometheus?page=1)
+
+
+
+## Grafana（Data Sources:Prometheus） - 展示
+[https://grafana.net/dashboards](https://grafana.net/dashboards)
+
+
+
+## company test deploy prometheus monitor docker container
+
+### Prometheus + Container-Exporter 
 
 > 参考 [使用 Prometheus 监控 Docker 容器](https://segmentfault.com/a/1190000002527178) 
 > 
@@ -7,7 +21,7 @@
 >端口8080错误，github使用端口：-p 9104:9104 
 
 
-## Prometheus + cAdvisor	不推荐 -- 测试 ##
+### Prometheus + cAdvisor	不推荐 -- 测试 ##
 
 	1.宿主机时间同步
 	2.cadvisor IP
@@ -17,5 +31,3 @@
 
 ----------
 
-
-- 通过一个Docker Compose配置文件就能建立全功能的Prometheus监控环境

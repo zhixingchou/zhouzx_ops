@@ -1,3 +1,6 @@
+# collector_sidecar.yml 模板文件
+
+# graylog 服务器IP
 server_url: http://172.17.0.4:12900
 update_interval: 10
 tls_skip_verify: false
